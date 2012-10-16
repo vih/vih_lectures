@@ -39,6 +39,12 @@ function vih_lectures_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'add_to_cart_confirmation_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'commerce_line_item_display' => array(
           'label' => 'hidden',
           'module' => 'commerce_price',
@@ -548,7 +554,7 @@ function vih_lectures_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '178',
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -1037,7 +1043,7 @@ function vih_lectures_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '178',
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
