@@ -632,78 +632,6 @@ function vih_lectures_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-vih_lecture-field_price'.
-  $fields['node-vih_lecture-field_price'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_price',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'number',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'number_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'vih_lecture',
-      'default_value' => array(
-        0 => array(
-          'value' => '50',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '10',
-        ),
-        'rss' => array(
-          'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 0,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_integer',
-          'weight' => '2',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '6',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_price',
-      'label' => 'Pris',
-      'required' => 0,
-      'settings' => array(
-        'max' => '',
-        'min' => '0',
-        'prefix' => '',
-        'suffix' => 'kr',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'number',
-        'settings' => array(),
-        'type' => 'number',
-        'weight' => '6',
-      ),
-    ),
-  );
-
   // Exported field: 'node-vih_lecture-field_product'.
   $fields['node-vih_lecture-field_product'] = array(
     'field_config' => array(
@@ -734,7 +662,7 @@ function vih_lectures_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'vih_lecture',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Tilføj et produkt for at sætte en pris på foredraget.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -744,6 +672,7 @@ function vih_lectures_field_default_fields() {
             'default_quantity' => 1,
             'line_item_type' => 'product',
             'show_quantity' => FALSE,
+            'show_single_product_attributes' => FALSE,
           ),
           'type' => 'commerce_cart_add_to_cart_form',
           'weight' => '7',
@@ -769,7 +698,14 @@ function vih_lectures_field_default_fields() {
         'field_injection' => 1,
         'referenceable_types' => array(
           'product' => 0,
+          'vih_kayak' => 0,
           'vih_lecture' => 'vih_lecture',
+          'vih_short_course_basic' => 0,
+          'vih_short_course_family' => 0,
+          'vih_short_course_kayak' => 0,
+          'vih_short_course_sommercamp' => 0,
+          'vih_short_course_sportcamp' => 0,
+          'vih_shourt_course_golf' => 0,
         ),
         'user_register_form' => FALSE,
       ),
@@ -779,7 +715,10 @@ function vih_lectures_field_default_fields() {
         'settings' => array(
           'fields' => array(),
           'type_settings' => array(
+            'allow_existing' => 0,
             'autogenerate_title' => 1,
+            'delete_references' => 0,
+            'match_operator' => 'CONTAINS',
             'use_variation_language' => 0,
           ),
         ),
@@ -1335,6 +1274,7 @@ function vih_lectures_field_default_fields() {
   t('Samarbejdspartner');
   t('Skal foredraget være synligt på foredragssiden?');
   t('Sted');
+  t('Tilføj et produkt for at sætte en pris på foredraget.');
   t('Undertitel');
   t('Vælg de foredrag der hører til denne foredragsrække.');
   t('Åbent');

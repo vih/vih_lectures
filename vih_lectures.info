@@ -34,7 +34,6 @@ features[field][] = node-vih_lecture-field_location
 features[field][] = node-vih_lecture-field_open_registration
 features[field][] = node-vih_lecture-field_partner
 features[field][] = node-vih_lecture-field_picture
-features[field][] = node-vih_lecture-field_price
 features[field][] = node-vih_lecture-field_product
 features[field][] = node-vih_lecture-field_speaker
 features[field][] = node-vih_lectures-body
