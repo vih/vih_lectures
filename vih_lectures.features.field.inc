@@ -127,6 +127,91 @@ function vih_lectures_field_default_fields() {
     ),
   );
 
+  // Exported field: 'commerce_product-vih_lecture-commerce_stock'.
+  $fields['commerce_product-vih_lecture-commerce_stock'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(
+        0 => 'commerce_product',
+      ),
+      'field_name' => 'commerce_stock',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'vih_lecture',
+      'default_value' => array(
+        0 => array(
+          'value' => '0',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => NULL,
+      'display' => array(
+        'add_to_cart_confirmation_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 3,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'line_item' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'commerce_product',
+      'field_name' => 'commerce_stock',
+      'label' => 'Lager',
+      'required' => TRUE,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => 7,
+      ),
+    ),
+  );
+
   // Exported field: 'node-vih_lecture-body'.
   $fields['node-vih_lecture-body'] = array(
     'field_config' => array(
@@ -499,9 +584,10 @@ function vih_lectures_field_default_fields() {
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => FALSE,
+            'links' => 0,
+            'view_mode' => 'teaser',
           ),
-          'type' => 'entityreference_label',
+          'type' => 'entityreference_entity_view',
           'weight' => '8',
         ),
         'rss' => array(
@@ -603,8 +689,14 @@ function vih_lectures_field_default_fields() {
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
-        'file_directory' => '',
+        'file_directory' => 'lectures',
         'file_extensions' => 'png jpg jpeg',
+        'focus' => 0,
+        'focus_lock_ratio' => 0,
+        'focus_min_size' => '',
+        'imagecrop' => array(
+          'subject_overview_thumbs' => 0,
+        ),
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -616,14 +708,39 @@ function vih_lectures_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            0 => 'public',
-            1 => 'private',
+            'private' => 'private',
+            'public' => 'public',
+            'youtube' => 0,
           ),
           'allowed_types' => array(
-            0 => 'image',
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 0,
           ),
-          'browser_plugins' => array(),
-          'preview_image_style' => 'thumbnail',
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'manualcrop_crop_info' => 1,
+          'manualcrop_default_crop_area' => 1,
+          'manualcrop_enable' => 1,
+          'manualcrop_inline_crop' => FALSE,
+          'manualcrop_instant_crop' => FALSE,
+          'manualcrop_instant_preview' => 1,
+          'manualcrop_require_cropping' => array(
+            'content_half_width' => 0,
+            'sidepicture' => 0,
+          ),
+          'manualcrop_styles_list' => array(
+            'content_half_width' => 0,
+            'sidepicture' => 'sidepicture',
+          ),
+          'manualcrop_styles_mode' => 'include',
+          'manualcrop_thumblist' => 1,
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
@@ -1019,6 +1136,9 @@ function vih_lectures_field_default_fields() {
         'default_image' => 0,
         'file_directory' => 'lectures',
         'file_extensions' => 'png jpg jpeg',
+        'focus' => 0,
+        'focus_lock_ratio' => 0,
+        'focus_min_size' => '',
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -1027,12 +1147,30 @@ function vih_lectures_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
+          'manualcrop_crop_info' => TRUE,
+          'manualcrop_default_crop_area' => TRUE,
+          'manualcrop_enable' => FALSE,
+          'manualcrop_inline_crop' => FALSE,
+          'manualcrop_instant_crop' => FALSE,
+          'manualcrop_instant_preview' => TRUE,
+          'manualcrop_require_cropping' => array(),
+          'manualcrop_styles_list' => array(),
+          'manualcrop_styles_mode' => 'exclude',
+          'manualcrop_thumblist' => FALSE,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'image_image',
+        'type' => 'media_generic',
         'weight' => '7',
       ),
     ),
@@ -1242,6 +1380,9 @@ function vih_lectures_field_default_fields() {
         'default_image' => 0,
         'file_directory' => 'partners',
         'file_extensions' => 'png jpg jpeg',
+        'focus' => 0,
+        'focus_lock_ratio' => 0,
+        'focus_min_size' => '',
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -1268,6 +1409,7 @@ function vih_lectures_field_default_fields() {
   t('Dato');
   t('Foredrag');
   t('Foredragsholder');
+  t('Lager');
   t('Logo');
   t('Pris');
   t('Produkt');

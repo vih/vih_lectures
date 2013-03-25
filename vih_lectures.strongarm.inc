@@ -40,6 +40,9 @@ function vih_lectures_strongarm() {
       'media_gallery_block' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -81,6 +84,18 @@ function vih_lectures_strongarm() {
         'product:field_vih_registration' => array(
           'default' => array(
             'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:status' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_stock' => array(
+          'default' => array(
+            'weight' => '7',
             'visible' => TRUE,
           ),
         ),
@@ -269,9 +284,7 @@ function vih_lectures_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_vih_lectures';
   $strongarm->value = array(
-    0 => 'promote',
-    1 => 'moderation',
-    2 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_vih_lectures'] = $strongarm;
 
@@ -280,7 +293,7 @@ function vih_lectures_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_vih_partner';
   $strongarm->value = array(
-    0 => 'moderation',
+    0 => 'status',
     1 => 'revision',
   );
   $export['node_options_vih_partner'] = $strongarm;
