@@ -991,6 +991,93 @@ function vih_lectures_views_default_views() {
     4 => 'node:field_short_course_lecture:vih_short_course_kajak',
     5 => 'node:field_short_course_lecture:vih_short_course_sport_camp',
   );
+
+  /* Display: Pane short course */
+  $handler = $view->new_display('panel_pane', 'Pane short course', 'panel_pane_3');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_picture' => 'field_picture',
+    'body' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_picture' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Entity Reference: Refererende entity */
+  $handler->display->display_options['relationships']['reverse_field_short_course_lecture_node']['id'] = 'reverse_field_short_course_lecture_node';
+  $handler->display->display_options['relationships']['reverse_field_short_course_lecture_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_short_course_lecture_node']['field'] = 'reverse_field_short_course_lecture_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Felt: Felt: Billede */
+  $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
+  $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
+  $handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
+  $handler->display->display_options['fields']['field_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_picture']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_picture']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Felt: Indhold: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Indhold: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_short_course_lecture_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $translatables['vih_lectures'] = array(
     t('Master'),
     t('Foredrag'),
@@ -1031,6 +1118,8 @@ function vih_lectures_views_default_views() {
 </div>'),
     t('Reference dialog Search'),
     t('Søg'),
+    t('Pane short course'),
+    t('Indhold refererer til Indhold fra field_short_course_lecture'),
   );
   $export['vih_lectures'] = $view;
 
