@@ -723,7 +723,11 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['filters']['field_open_registration_value']['id'] = 'field_open_registration_value';
   $handler->display->display_options['filters']['field_open_registration_value']['table'] = 'field_data_field_open_registration';
   $handler->display->display_options['filters']['field_open_registration_value']['field'] = 'field_open_registration_value';
-  $handler->display->display_options['filters']['field_open_registration_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_open_registration_value']['operator'] = 'and';
+  $handler->display->display_options['filters']['field_open_registration_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_open_registration_value']['group'] = 1;
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Slideshow */
@@ -864,6 +868,14 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['filters']['field_date_value']['operator'] = '<';
   $handler->display->display_options['filters']['field_date_value']['group'] = 1;
   $handler->display->display_options['filters']['field_date_value']['default_date'] = '+50 day';
+  /* Filterkriterie: Indhold: Åbent (field_open_registration) */
+  $handler->display->display_options['filters']['field_open_registration_value']['id'] = 'field_open_registration_value';
+  $handler->display->display_options['filters']['field_open_registration_value']['table'] = 'field_data_field_open_registration';
+  $handler->display->display_options['filters']['field_open_registration_value']['field'] = 'field_open_registration_value';
+  $handler->display->display_options['filters']['field_open_registration_value']['operator'] = 'and';
+  $handler->display->display_options['filters']['field_open_registration_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Reference dialog Search */
   $handler = $view->new_display('references_dialog', 'Reference dialog Search', 'references_dialog_1');
@@ -1041,6 +1053,9 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'strong';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Felt: Billede */
   $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
   $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
@@ -1050,7 +1065,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['field_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_picture']['settings'] = array(
     'image_style' => 'thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Felt: Indhold: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -1078,6 +1093,22 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'vih_lecture' => 'vih_lecture',
+  );
   $translatables['vih_lectures'] = array(
     t('Master'),
     t('Foredrag'),

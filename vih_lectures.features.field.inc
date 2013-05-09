@@ -493,8 +493,8 @@ function vih_lectures_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => '',
-          1 => '',
+          0 => 'closed',
+          1 => 'open',
         ),
         'allowed_values_function' => '',
       ),
@@ -503,7 +503,11 @@ function vih_lectures_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'vih_lecture',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
       'deleted' => '0',
       'description' => 'Skal foredraget være synligt på foredragssiden?',
       'display' => array(
@@ -527,6 +531,7 @@ function vih_lectures_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
+      'fences_wrapper' => 'div',
       'field_name' => 'field_open_registration',
       'label' => 'Åbent',
       'required' => 0,
