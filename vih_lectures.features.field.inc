@@ -777,7 +777,9 @@ function vih_lectures_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'commerce_product_reference',
-      'settings' => array(),
+      'settings' => array(
+        'options_list_limit' => NULL,
+      ),
       'translatable' => '0',
       'type' => 'commerce_product_reference',
     ),
