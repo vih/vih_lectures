@@ -14,7 +14,7 @@ function vih_lectures_commerce_product_default_types() {
       'name' => 'Foredrag',
       'description' => '',
       'help' => '',
-      'revision' => '1',
+      'revision' => 1,
     ),
   );
   return $items;
@@ -34,7 +34,7 @@ function vih_lectures_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function vih_lectures_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
