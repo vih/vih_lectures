@@ -43,6 +43,9 @@ function vih_lectures_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'featured' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -68,16 +71,28 @@ function vih_lectures_strongarm() {
             'weight' => '11',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '-10',
+            'visible' => FALSE,
+          ),
         ),
         'product:title' => array(
           'default' => array(
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '-5',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_price' => array(
           'default' => array(
             'weight' => '6',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
@@ -92,9 +107,17 @@ function vih_lectures_strongarm() {
             'weight' => '5',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_stock' => array(
           'default' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
             'weight' => '7',
             'visible' => TRUE,
           ),

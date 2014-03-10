@@ -18,6 +18,7 @@ dependencies[] = list
 dependencies[] = media
 dependencies[] = number
 dependencies[] = options
+dependencies[] = panopoly_pages
 dependencies[] = references_dialog
 dependencies[] = strongarm
 dependencies[] = views

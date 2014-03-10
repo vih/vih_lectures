@@ -185,6 +185,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -242,6 +248,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 3,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'inline',
         'module' => 'date',
@@ -265,7 +277,6 @@ function vih_lectures_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -311,6 +322,12 @@ function vih_lectures_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -362,6 +379,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -411,6 +434,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 8,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'inline',
         'module' => 'entityreference',
@@ -459,6 +488,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -492,6 +527,7 @@ function vih_lectures_field_default_field_instances() {
       'focus' => 0,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
+      'focus_required' => 0,
       'imagecrop' => array(
         'subject_overview_thumbs' => 0,
       ),
@@ -556,14 +592,20 @@ function vih_lectures_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'commerce_cart',
         'settings' => array(
-          'combine' => TRUE,
+          'combine' => 1,
           'default_quantity' => 1,
-          'line_item_type' => 'product',
-          'show_quantity' => FALSE,
-          'show_single_product_attributes' => FALSE,
+          'line_item_type' => 'vih_foredrag',
+          'show_quantity' => 0,
+          'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
         'weight' => 7,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'above',
@@ -629,6 +671,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -677,6 +725,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -722,6 +776,12 @@ function vih_lectures_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 3,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -770,6 +830,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -789,6 +855,7 @@ function vih_lectures_field_default_field_instances() {
       'focus' => 0,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
+      'focus_required' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -839,6 +906,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -877,6 +950,12 @@ function vih_lectures_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -922,6 +1001,12 @@ function vih_lectures_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -945,6 +1030,7 @@ function vih_lectures_field_default_field_instances() {
       'focus' => 0,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
+      'focus_required' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',

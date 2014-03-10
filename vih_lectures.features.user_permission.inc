@@ -17,7 +17,6 @@ function vih_lectures_user_default_permissions() {
       'administrator' => 'administrator',
       'kontor' => 'kontor',
       'lærer' => 'lærer',
-      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -27,6 +26,7 @@ function vih_lectures_user_default_permissions() {
     'name' => 'delete any vih_lectures content',
     'roles' => array(
       'administrator' => 'administrator',
+      'lærer' => 'lærer',
     ),
     'module' => 'node',
   );
@@ -38,7 +38,6 @@ function vih_lectures_user_default_permissions() {
       'administrator' => 'administrator',
       'kontor' => 'kontor',
       'lærer' => 'lærer',
-      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -50,7 +49,6 @@ function vih_lectures_user_default_permissions() {
       'administrator' => 'administrator',
       'kontor' => 'kontor',
       'lærer' => 'lærer',
-      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -62,7 +60,6 @@ function vih_lectures_user_default_permissions() {
       'administrator' => 'administrator',
       'kontor' => 'kontor',
       'lærer' => 'lærer',
-      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
