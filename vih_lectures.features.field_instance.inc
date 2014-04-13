@@ -10,6 +10,67 @@
 function vih_lectures_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'commerce_line_item-vih_lecture-commerce_product'
+  $field_instances['commerce_line_item-vih_lecture-commerce_product'] = array(
+    'bundle' => 'vih_lecture',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'commerce_cart',
+        'settings' => array(
+          'combine' => TRUE,
+          'default_quantity' => 1,
+          'line_item_type' => 'product',
+          'show_quantity' => FALSE,
+          'show_single_product_attributes' => FALSE,
+        ),
+        'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => 2,
+      ),
+      'display' => array(
+        'label' => 'hidden',
+        'module' => 'commerce_cart',
+        'settings' => array(
+          'combine' => TRUE,
+          'default_quantity' => 1,
+          'line_item_type' => 'product',
+          'show_quantity' => FALSE,
+          'show_single_product_attributes' => FALSE,
+        ),
+        'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_line_item',
+    'field_name' => 'commerce_product',
+    'label' => 'Product',
+    'required' => TRUE,
+    'settings' => array(
+      'field_injection' => TRUE,
+      'referenceable_types' => array(),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'commerce_product_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'commerce_product/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'commerce_product_reference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'commerce_product-vih_lecture-commerce_price'
   $field_instances['commerce_product-vih_lecture-commerce_price'] = array(
     'bundle' => 'vih_lecture',
@@ -633,7 +694,6 @@ function vih_lectures_field_default_field_instances() {
         'vih_short_course_basic' => 0,
         'vih_short_course_family' => 0,
         'vih_short_course_kayak' => 0,
-        'vih_short_course_sommercamp' => 0,
         'vih_short_course_sportcamp' => 0,
         'vih_shourt_course_golf' => 0,
       ),
@@ -1059,6 +1119,7 @@ function vih_lectures_field_default_field_instances() {
   t('Lager');
   t('Logo');
   t('Pris');
+  t('Product');
   t('Produkt');
   t('Samarbejdspartner');
   t('Skal foredraget være synligt på foredragssiden?');
