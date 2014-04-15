@@ -5,3 +5,14 @@
  */
 
 include_once('vih_lectures.features.inc');
+
+function vih_lectures_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'VIHLecturesProduct' => array('class_name' => 'VIHLecturesProduct'),
+      'VIHLecturesNode' => array('class_name' => 'VIHLecturesNode'),
+    ),
+  );
+  return $api;
+}

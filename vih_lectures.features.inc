@@ -5,6 +5,22 @@
  */
 
 /**
+ * Implements hook_commerce_line_item_default_types().
+ */
+function vih_lectures_commerce_line_item_default_types() {
+  $items = array(
+    'vih_foredrag' => array(
+      'name' => 'VIH Foredrag',
+      'description' => 'A customizable product line item type.',
+      'product' => TRUE,
+      'add_form_submit_value' => 'Add product',
+      'base' => 'commerce_product_line_item',
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_commerce_product_default_types().
  */
 function vih_lectures_commerce_product_default_types() {
