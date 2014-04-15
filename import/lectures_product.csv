@@ -1,0 +1,4 @@
+Title,SKU,Price,Stock status,Stock quantity
+Lecture,LECTURE,40.00,1,50
+Lecture sold out,LECTURE-SOLDOUT,40.00,1,0
+Lecture expired,LECTURE-EXPIRED,40.00,1,50
