@@ -313,7 +313,8 @@ function vih_lectures_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_vih_lectures';
   $strongarm->value = array(
-    0 => 'revision',
+    0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_vih_lectures'] = $strongarm;
 
