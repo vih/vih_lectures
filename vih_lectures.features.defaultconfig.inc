@@ -65,7 +65,7 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'create commerce_product entities of bundle vih_lecture',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'commerce_product',
   );
@@ -75,8 +75,8 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'create vih_lecture content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -86,8 +86,8 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'delete any vih_lecture content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -97,8 +97,8 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'delete own vih_lecture content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -108,7 +108,7 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'edit any commerce_product entity of bundle vih_lecture',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'commerce_product',
   );
@@ -118,8 +118,8 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'edit any vih_lecture content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -129,7 +129,7 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'edit own commerce_product entities of bundle vih_lecture',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'commerce_product',
   );
@@ -139,8 +139,8 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'edit own vih_lecture content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -150,7 +150,7 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'view any commerce_product entity of bundle vih_lecture',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'commerce_product',
   );
@@ -160,7 +160,7 @@ function vih_lectures_defaultconfig_user_default_permissions() {
     'name' => 'view own commerce_product entities of bundle vih_lecture',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'commerce_product',
   );
