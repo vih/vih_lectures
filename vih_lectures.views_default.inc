@@ -1113,6 +1113,8 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['filters']['field_open_registration_value']['value'] = array(
     1 => '1',
   );
+  $handler->display->display_options['pane_category']['name'] = 'VIH Lectures';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -1163,7 +1165,7 @@ function vih_lectures_views_default_views() {
     t('VIH Short Course'),
     t('Lectures Overview Pane'),
     t('[field_speaker]: [title]'),
-    t('View panes'),
+    t('VIH Lectures'),
   );
   $export['vih_lectures'] = $view;
 
