@@ -72,7 +72,7 @@ function vih_lectures_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '-10',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
@@ -82,7 +82,7 @@ function vih_lectures_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '-5',
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
@@ -92,8 +92,8 @@ function vih_lectures_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '4',
+            'visible' => FALSE,
           ),
         ),
         'product:field_vih_registration' => array(
@@ -108,7 +108,7 @@ function vih_lectures_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -118,8 +118,8 @@ function vih_lectures_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '7',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
         ),
       ),
