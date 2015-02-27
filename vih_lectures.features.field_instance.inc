@@ -50,71 +50,6 @@ function vih_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-vih_lectures-field_registrant_name'
-  $field_instances['commerce_line_item-vih_lectures-field_registrant_name'] = array(
-    'bundle' => 'vih_foredrag',
-    'commerce_cart_settings' => array(
-      'field_access' => 1,
-    ),
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'commerce_line_item',
-    'field_name' => 'field_registrant_name',
-    'label' => 'Navn',
-    'required' => 1,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'mailchimp_campaign' => array(
-              'weight' => 0,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'commerce_line_item-vih_foredrag-commerce_product'
   $field_instances['commerce_line_item-vih_foredrag-commerce_product'] = array(
     'bundle' => 'vih_foredrag',
@@ -325,6 +260,71 @@ function vih_lectures_field_default_field_instances() {
       ),
       'type' => 'commerce_price_full',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_line_item-vih_foredrag-field_registrant_name'
+  $field_instances['commerce_line_item-vih_foredrag-field_registrant_name'] = array(
+    'bundle' => 'vih_foredrag',
+    'commerce_cart_settings' => array(
+      'field_access' => 1,
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_line_item',
+    'field_name' => 'field_registrant_name',
+    'label' => 'Navn',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
     ),
   );
 
@@ -1439,6 +1439,7 @@ function vih_lectures_field_default_field_instances() {
   t('Foredragsholder');
   t('Lager');
   t('Logo');
+  t('Navn');
   t('Pris');
   t('Product');
   t('Produkt');
