@@ -17,7 +17,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_lectures',
-    'foreign keys' => array(),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -57,7 +56,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_location',
-    'foreign keys' => array(),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -79,7 +77,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_open_registration',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -105,7 +102,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_partner',
-    'foreign keys' => array(),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -134,7 +130,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_product',
-    'foreign keys' => array(),
     'indexes' => array(
       'product_id' => array(
         0 => 'product_id',
@@ -156,7 +151,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_speaker',
-    'foreign keys' => array(),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -178,7 +172,6 @@ function vih_lectures_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_subtitle',
-    'foreign keys' => array(),
     'indexes' => array(
       'format' => array(
         0 => 'format',

@@ -10,7 +10,8 @@
 function vih_lectures_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'commerce_line_item-vih_foredrag-commerce_display_path'
+  // Exported field_instance:
+  // 'commerce_line_item-vih_foredrag-commerce_display_path'
   $field_instances['commerce_line_item-vih_foredrag-commerce_display_path'] = array(
     'bundle' => 'vih_foredrag',
     'default_value' => NULL,
@@ -184,7 +185,8 @@ function vih_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-vih_foredrag-commerce_unit_price'
+  // Exported field_instance:
+  // 'commerce_line_item-vih_foredrag-commerce_unit_price'
   $field_instances['commerce_line_item-vih_foredrag-commerce_unit_price'] = array(
     'bundle' => 'vih_foredrag',
     'default_value' => NULL,
@@ -263,7 +265,8 @@ function vih_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-vih_foredrag-field_registrant_name'
+  // Exported field_instance:
+  // 'commerce_line_item-vih_foredrag-field_registrant_name'
   $field_instances['commerce_line_item-vih_foredrag-field_registrant_name'] = array(
     'bundle' => 'vih_foredrag',
     'commerce_cart_settings' => array(
@@ -617,6 +620,7 @@ function vih_lectures_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -636,6 +640,7 @@ function vih_lectures_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -650,6 +655,7 @@ function vih_lectures_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
