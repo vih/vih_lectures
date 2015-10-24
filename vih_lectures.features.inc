@@ -62,27 +62,27 @@ function vih_lectures_views_api($module = NULL, $api = NULL) {
 function vih_lectures_node_info() {
   $items = array(
     'vih_lecture' => array(
-      'name' => t('Foredrag'),
+      'name' => t('Lecture'),
       'base' => 'node_content',
-      'description' => t('Bruges til at indtaste de enkelte foredrag.'),
+      'description' => t('Use <em>lecture</em> for events where the registrant can pay online.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
     ),
     'vih_lectures' => array(
-      'name' => t('Foredragsrække'),
+      'name' => t('Lecture calendar'),
       'base' => 'node_content',
-      'description' => t('Brug <em>foredragsrække</em> til at samle foredrag, som skal udskrives i et hæfte.'),
+      'description' => t('Use <em>lecture calendar</em> to create a small pamphlet with all the chosen lectures.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
     ),
     'vih_partner' => array(
-      'name' => t('Samarbejdspartner'),
+      'name' => t('Lecture Partner'),
       'base' => 'node_content',
-      'description' => t('Brug <em>samarbejdspartner</em> til organisationer, vi samarbejder med - fx omkring foredragsrækken.'),
+      'description' => t('Use <em>partner</em> to describe who we are working together with to create e.g. the lectures.'),
       'has_title' => '1',
-      'title_label' => t('Navn'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );
