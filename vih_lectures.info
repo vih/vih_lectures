@@ -1,5 +1,5 @@
 name = VIH Lectures
-description = Describes the lectures
+description = Handles lectures / events with commerce integration
 core = 7.x
 package = VIH
 version = 7.x-1.0
