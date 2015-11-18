@@ -944,9 +944,12 @@ function vih_lectures_views_default_views() {
   );
   $handler->display->display_options['path'] = 'foredrag.xml';
   $handler->display->display_options['displays'] = array(
-    'lectures_block_table' => 'lectures_block_table',
+    'panel_pane_4' => 'panel_pane_4',
     'default' => 0,
-    'lectures_slideshow_block' => 0,
+    'page_1' => 0,
+    'panel_pane_1' => 0,
+    'panel_pane_2' => 0,
+    'panel_pane_3' => 0,
   );
 
   /* Display: Ical */
@@ -991,9 +994,12 @@ function vih_lectures_views_default_views() {
   );
   $handler->display->display_options['path'] = 'foredrag.ics';
   $handler->display->display_options['displays'] = array(
-    'lectures_block_table' => 'lectures_block_table',
+    'panel_pane_4' => 'panel_pane_4',
     'default' => 0,
-    'lectures_slideshow_block' => 0,
+    'page_1' => 0,
+    'panel_pane_1' => 0,
+    'panel_pane_2' => 0,
+    'panel_pane_3' => 0,
   );
 
   /* Display: Reference dialog Search */
@@ -1570,11 +1576,11 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Scheduler: Publish on */
   $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
   $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
   $handler->display->display_options['fields']['publish_on']['field'] = 'publish_on';
-  /* Field: Broken/missing handler */
+  /* Field: Scheduler: Unpublish on */
   $handler->display->display_options['fields']['unpublish_on']['id'] = 'unpublish_on';
   $handler->display->display_options['fields']['unpublish_on']['table'] = 'scheduler';
   $handler->display->display_options['fields']['unpublish_on']['field'] = 'unpublish_on';
@@ -1606,14 +1612,12 @@ function vih_lectures_views_default_views() {
     'vih_lectures' => 'vih_lectures',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Scheduler: Unpublish on */
   $handler->display->display_options['filters']['unpublish_on']['id'] = 'unpublish_on';
   $handler->display->display_options['filters']['unpublish_on']['table'] = 'scheduler';
   $handler->display->display_options['filters']['unpublish_on']['field'] = 'unpublish_on';
   $handler->display->display_options['filters']['unpublish_on']['operator'] = '>=';
-  $handler->display->display_options['filters']['unpublish_on']['value'] = array(
-    'value' => '-1 month',
-  );
+  $handler->display->display_options['filters']['unpublish_on']['value']['value'] = '-1 month';
   $handler->display->display_options['filters']['unpublish_on']['expose']['operator_id'] = 'unpublish_on_op';
   $handler->display->display_options['filters']['unpublish_on']['expose']['label'] = 'Afpublicér den';
   $handler->display->display_options['filters']['unpublish_on']['expose']['operator'] = 'unpublish_on_op';
@@ -1633,8 +1637,8 @@ function vih_lectures_views_default_views() {
     t('more'),
     t('Content pane'),
     t('Foredragsrække'),
-    t('Broken handler scheduler.publish_on'),
-    t('Broken handler scheduler.unpublish_on'),
+    t('Publish on'),
+    t('Unpublish on'),
     t('Published'),
     t('Afpublicér den'),
     t('VIH Admin'),
