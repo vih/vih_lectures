@@ -227,10 +227,13 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'commerce_order';
   $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['operator'] = 'not in';
   $handler->display->display_options['filters']['status']['value'] = array(
-    'pending' => 'pending',
-    'completed' => 'completed',
-    'checkout_complete' => 'checkout_complete',
+    'canceled' => 'canceled',
+    'cart' => 'cart',
+    'checkout_checkout' => 'checkout_checkout',
+    'checkout_review' => 'checkout_review',
+    'checkout_payment' => 'checkout_payment',
   );
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Order status';
@@ -241,8 +244,8 @@ function vih_lectures_views_default_views() {
     1 => 0,
   );
 
-  /* Display: Foredrag */
-  $handler = $view->new_display('page', 'Foredrag', 'page_3');
+  /* Display: Lecture registrations page */
+  $handler = $view->new_display('page', 'Lecture registrations page', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Tilmeldinger';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -322,8 +325,8 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['tab_options']['weight'] = '0';
 
-  /* Display: Email */
-  $handler = $view->new_display('page', 'Email', 'page_4');
+  /* Display: Lecture node email page */
+  $handler = $view->new_display('page', 'Lecture node email page', 'page_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Tilmeldinger';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -429,12 +432,12 @@ function vih_lectures_views_default_views() {
     t('Order Balance'),
     t('Navn'),
     t('All'),
-    t('Foredrag'),
+    t('Lecture registrations page'),
     t('Tilmeldinger'),
     t('more'),
     t('I alt @total tilmeldinger til foredraget'),
     t('Indholdselement henviser til produkter fra field_product'),
-    t('Email'),
+    t('Lecture node email page'),
     t('Name'),
     t('Product'),
     t('Lecture'),
@@ -496,7 +499,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
   $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
   $handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
-  /* Sort criterion: Content: Date -  start date (field_date) */
+  /* Sort criterion: Content: Dato -  start date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
@@ -585,7 +588,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['field_speaker']['id'] = 'field_speaker';
   $handler->display->display_options['fields']['field_speaker']['table'] = 'field_data_field_speaker';
   $handler->display->display_options['fields']['field_speaker']['field'] = 'field_speaker';
-  /* Field: Content: Date */
+  /* Field: Content: Dato */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -728,7 +731,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Date */
+  /* Field: Content: Dato */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -847,7 +850,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Date */
+  /* Field: Content: Dato */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -911,7 +914,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date -  start date (field_date) */
+  /* Sort criterion: Content: Dato -  start date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
@@ -1062,7 +1065,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Date */
+  /* Field: Content: Dato */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -1080,7 +1083,7 @@ function vih_lectures_views_default_views() {
   );
   $handler->display->display_options['fields']['field_date']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date -  start date (field_date) */
+  /* Sort criterion: Content: Dato -  start date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
@@ -1279,7 +1282,7 @@ function vih_lectures_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Date */
+  /* Field: Content: Dato */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -1357,9 +1360,8 @@ function vih_lectures_views_default_views() {
     t('more'),
     t('Title'),
     t('Foredragsholder'),
-    t('Date'),
-    t('Published'),
     t('Dato'),
+    t('Published'),
     t('Content pane'),
     t('VIH Admin'),
     t('Content pane next'),
